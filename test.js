@@ -33,7 +33,7 @@ class DbConn {
         return new Promise((resolve, reject) => {
             self.connection = mongoose.createConnection(url, connectionOptions, err => {
                 if (err) {
-                    log.error(`ERROR connecting to DB: ${self.dbName}, err: ${err}`);
+                    log(`ERROR connecting to DB: ${self.dbName}, err: ${err}`);
                     reject(err);
                 } else {
                     resolve(self);
